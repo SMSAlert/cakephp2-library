@@ -1,6 +1,6 @@
 ## Overview
 
-Sms Alert Codeigniter Library for sending transactional/promotional SMS, through your custom code. Easy to integrate, you just need to write 2 lines of code to send SMS.
+Sms Alert Cakephp 2 Library for sending transactional/promotional SMS, through your custom code. Easy to integrate, you just need to write 2 lines of code to send SMS.
 
 ## Parameters Details
 ### If you have no account on smsalert.co.in, kindly register https://www.smsalert.co.in/
@@ -27,12 +27,12 @@ Sms Alert Codeigniter Library for sending transactional/promotional SMS, through
 
   > App::uses('SmsAlertLib', 'SmsAlertLib')
    
-### Call smsalertlib object and call sendsms function in your controller:
+### To send sms, Call smsalertlib object and call sendsms function in your controller:
 
   > $obj= new SmsAlertLib;
   >
   > $obj->sendmsg($phone,$message);
-   
+  
     
 ## Support 
   Email :  support@cozyvision.com  
