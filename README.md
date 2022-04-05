@@ -30,7 +30,7 @@ Sms Alert Codeigniter Library for sending transactional/promotional SMS, through
 ### call smsalertlib object and call sendsms function in your controller:
 
   > $obj= new SmsAlertLib;
-   -$obj->sendmsg($phone,$message);
+  > $obj->sendmsg($phone,$message);
    
     
 ## Support 
