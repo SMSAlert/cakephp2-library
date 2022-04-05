@@ -19,9 +19,9 @@ Sms Alert Codeigniter Library for sending transactional/promotional SMS, through
 
 ### Change below variables at yourproject/app/Lib/SmsAlertLib/SmsAlertLib.php:
 
-  $user = "Smsalert username";  
-  $pass = "Smsalert password";  
-  $senderid = "Smsalert senderid"; 
+  >$user = "Smsalert username";  
+  >$pass = "Smsalert password";  
+  >$senderid = "Smsalert senderid"; 
   
 ### Call SMS Alert library as shown below in your controller:
 
