@@ -2,8 +2,8 @@
 include("vendor/autoload.php");
 use SMSAlert\Lib\Smsalert\Smsalert;
 class SmsAlertLib{
-    public $user = 'Zunaid@123';//enter SMS Alert Username
-    public $pass = 'rwz0KRY$';//enter SMS Alert Password
+    public $user = '';//enter SMS Alert Username
+    public $pass = '';//enter SMS Alert Password
     public $senderid = 'CVDEMO';
 
 
