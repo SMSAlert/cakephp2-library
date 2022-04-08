@@ -31,7 +31,24 @@ Sms Alert Cakephp 2 Library for sending transactional/promotional SMS, through y
 
   > $obj= new SmsAlertLib;
   >
-  > $obj->sendmsg($phone,$message);
+  > $result = $obj->sendmsg($phone,$message);
+  >
+  > echo json_encode($result);
+  
+### To Send OTP, Call smsalertlib object and below functions in your controller:
+
+  > $obj= new SmsAlertLib;
+  >
+  > $obj	= new SmsAlertLib;
+  > $result = $obj->send_otp_number($mobileno,$msg);
+
+### To Verify OTP, Call smsalertlib object and below functions in your controller:
+
+  > $obj= new SmsAlertLib;
+  >
+  > $obj	= new SmsAlertLib;
+  > $result=$obj->validate_otp($otp,$mobileno);  
+  
   
     
 ## Support 
