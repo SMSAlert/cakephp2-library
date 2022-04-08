@@ -1,6 +1,5 @@
 <?php
 App::uses('SmsAlertLib', 'SmsAlertLib');
-
 class UsersController extends AppController {
     public $name = 'Users';
     
@@ -9,9 +8,12 @@ class UsersController extends AppController {
         if ($this->request->is('post')) {
             $phone=$_POST["phone"];
             $message 	= $_POST["message"];
-			$obj		= new SmsAlertLib;
-			$result 	= $obj->sendmsg($phone,$message);
-			echo json_encode($result);
+			$obj= new SmsAlertLib;
+			$result = $obj->sendmsg($phone,$message);
+			if($result['status'] == "success"){
+                echo $result['description']['desc'];
+            }
+			
 		}
     }
 
@@ -50,6 +52,7 @@ class UsersController extends AppController {
                   
     }
 
+
     public function send_otp_number(){
         if ($this->request->is('post')){
             $mobileno = $_POST['mobileno'];
@@ -69,7 +72,9 @@ class UsersController extends AppController {
             $mobileno = $_POST['mobileno'];
 			$obj= new SmsAlertLib;
 			$result=$obj->validate_otp($otp,$mobileno);
-			echo json_encode($result);
+			if($result['status'] == "success"){
+                echo $result['description']['desc'];
+            }
         }
 	}
 
@@ -90,7 +95,6 @@ public function create_template() {
 
      }
 }
-
 
    
 
