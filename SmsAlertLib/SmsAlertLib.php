@@ -2,8 +2,8 @@
 include("vendor/autoload.php");
 use SMSAlert\Lib\Smsalert\Smsalert;
 class SmsAlertLib{
-    public $user = '';//enter SMS Alert Username
-    public $pass = '';//enter SMS Alert Password
+    public $user = 'Zunaid@123';//enter SMS Alert Username
+    public $pass = 'rwz0KRY$';//enter SMS Alert Password
     public $senderid = 'CVDEMO';
 
 
@@ -11,18 +11,10 @@ class SmsAlertLib{
     public function sendmsg($MOBILENO, $TEXT){
         $smsalert      = (new Smsalert())
 		->authWithUserIdPwd($this->user,$this->pass);
-
-       $result =  $smsalert->setSender($this->senderid)
+		$result =  $smsalert->setSender($this->senderid)
         ->send($MOBILENO, $TEXT);
-
-        print_r($result);exit();
-        return $result;
-
-       
-    }
-
-
-
+		return $result;
+	}
 
 
 // Create Group.................
@@ -31,8 +23,7 @@ class SmsAlertLib{
                 ->authWithUserIdPwd($this->user, $this->pass);
        $result = $smsalert->creategroup($grpname);
        return $result;
-
-    } 
+	} 
 
 
 
